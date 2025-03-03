@@ -1,0 +1,58 @@
+--------------------- MoorDyn Input File ------------------------------------
+IEA 15 MW WindCrete Gran Canaria COREWIND, Climent Molins (Climent.Molins@upc.edu), Pau Trubat (Pau.Trubat.Casal@upc.edu).  M.Youssef Mahfouz (mahfouz@IFB.Uni-Stuttgart.de)
+True    Echo      - echo the input file data (flag)
+----------------------- LINE TYPES ------------------------------------------
+2        NTypes    - number of LineTypes
+Name     Diam      MassDen      EA    BA/-zeta  Can   Cat   Cdn   Cdt
+(-)       (m)      (kg/m)       (N)   (N-s/-)   (-)   (-)   (-)   (-)
+CHAIN1   0.1998    245.19   1.052e+09   -1      1.0   0.5   2.4    1.15
+CHAIN2   0.1800    199        854e+06   -1      1.0   0.5   2.4    1.15
+---------------------- CONNECTION PROPERTIES --------------------------------
+12       NConnects - number of connections including anchors and fairleads
+Node    Type      X        Y        Z       M     V      FX   FY   FZ   CdA   CA
+(-)     (-)      (m)      (m)      (m)     (kg)  (m^3)  (kN) (kN) (kN) (m^2)  (-)
+1   fixed     -743.34     0.0     -200       0     0     0     0    0    0     0 
+2   connect    -52.3594   0.0     -105.818   0     0     0     0    0    0     0 
+3   fixed      396.33  -686.47    -200       0     0     0     0    0    0     0 
+4   connect     23.9077 -44.1713  -104.374   0     0     0     0    0    0     0
+5   fixed      396.33   686.47    -200       0     0     0     0    0    0     0 
+6   connect     23.9077  44.1713  -104.374   0     0     0     0    0    0     0
+7   vessel      -4.65     8.054    -90.00    0     0     0     0    0    0     0
+8   vessel      -4.65    -8.054    -90.00    0     0     0     0    0    0     0
+9   vessel      -4.65    -8.054    -90.00    0     0     0     0    0    0     0
+10  vessel       9.3      0.0      -90.00    0     0     0     0    0    0     0 
+11  vessel       9.3      0.0      -90.00    0     0     0     0    0    0     0 
+12  vessel      -4.65     8.054    -90.00    0     0     0     0    0    0     0
+---------------------- LINE PROPERTIES --------------------------------------
+9        NLines    - number of line objects
+Line    LineType  UnstrLen  NumSegs   NodeAnch  NodeFair  Flags/Outputs
+(-)       (-)       (m)       (-)       (-)       (-)         (-)
+1        CHAIN1      700      19         1         2           - 
+2        CHAIN1      50.0      2         2         7           -
+3        CHAIN1      50.0      2         2         8           -
+4        CHAIN2      750      21         3         4           -
+5        CHAIN1      50.0      2         4         9           -
+6        CHAIN1      50.0      2         4        10           -
+7        CHAIN2      750      21         5         6           -
+8        CHAIN1      50.0      2         6        11           -
+9        CHAIN1      50.0      2         6        12           -
+---------------------- SOLVER OPTIONS ---------------------------------------
+0.001    dtM       - time step to use in mooring integration (s)
+3.0e5    kbot      - bottom stiffness (Pa/m)
+3.0e4    cbot      - bottom damping (Pa-s/m)
+2.0      dtIC      - time interval for analyzing convergence during IC gen (s)
+60.0     TmaxIC    - max time for ic gen (s)
+4.0      CdScaleIC - factor by which to scale drag coefficients during dynamic relaxation (-)
+0.01     threshIC  - threshold for IC convergence (-)
+------------------------ OUTPUTS --------------------------------------------
+AnchTen1
+FairTen2
+FairTen3
+AnchTen4
+FairTen5
+FairTen6
+AnchTen7
+FairTen8
+FairTen9
+END
+------------------------- need this line --------------------------------------

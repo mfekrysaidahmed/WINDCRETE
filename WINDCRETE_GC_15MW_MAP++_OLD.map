@@ -1,0 +1,38 @@
+--------------- LINE DICTIONARY ----------------------------------------------
+LineType  Diam      MassDenInAir   EA        CB   
+(-)       (m)       (kg/m)        (N)        (-)  
+CHAIN     0.160    561.2520     2.3040e+09      1.0  
+--------------- NODE PROPERTIES ----------------------------------------------
+Node Type       X       Y       Z         M     B     FX    FY    FZ
+(-)  (-)       (m)     (m)     (m)       (kg)  (mˆ3)  (N)   (N)   (N)
+1    fix   -600.0      0.0      -200      0     0     #     #     #     
+2  connect #-47.665   #0.0   #-114.23     0     0     0     0     0   
+3    fix    300    -519.6152   -200       0     0     #     #     #    
+4  connect #23.8325  #-41.2791  #-114.23    0     0     0     0     0
+5   fix     300   519.6152   -200       0     0     #     #     #   
+6   connect #23.8325  #41.2791  #-114.23    0     0     0     0     0
+7   vessel    -4.65    8.054   -90.00      0     0     #     #     #
+8   vessel    -4.65   -8.054   -90.00      0     0     #     #     #
+9   vessel     9.3     0.0    -90.00      0     0     #     #     #   
+10   vessel    -4.65    8.054   -90.00      0     0     #     #     #
+11   vessel    -4.65   -8.054   -90.00      0     0     #     #     #
+12   vessel     9.3     0.0    -90.00      0     0     #     #     #   
+--------------- LINE PROPERTIES ----------------------------------------------
+Line    LineType  UnstrLen  NodeAnch  NodeFair  Flags
+(-)      (-)       (m)       (-)       (-)       (-)
+1        CHAIN      565      1         2         TENSION_ANCH ALTITUDE_ANCH 
+2        CHAIN      50.0      2         7         TENSION_FAIR 
+3        CHAIN      50.0      2         11         TENSION_FAIR 
+4        CHAIN      565      3         4         TENSION_ANCH ALTITUDE_ANCH
+5        CHAIN      50.0      4         8         TENSION_FAIR
+6        CHAIN      50.0      4         12         TENSION_FAIR
+7        CHAIN      565      5         6         TENSION_ANCH ALTITUDE_ANCH
+8        CHAIN      50.0      6         10         TENSION_FAIR
+9        CHAIN      50.0      6         9         TENSION_FAIR
+--------------- SOLVER OPTIONS------------------------------------------------
+Option
+(-)
+outer_tol 1e-2
+
+
+
